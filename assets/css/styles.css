@@ -40,8 +40,7 @@ input[type="text"]::placeholder {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    margin-right: 228px;
-    text-color: black;
+    margin-right: 295px;
 }
 
 :checked + label {
