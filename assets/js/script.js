@@ -1,12 +1,23 @@
 const form = document.getElementById("form");
 const list = document.getElementById("list");
 
+function refresh() {
+  location.reload();
+};
+
+
 form.onsubmit = function (e) {
  e.preventDefault();
  const input = document.getElementById("input");
+ if(input.value == "") {
+    alert("Preencha o campo com uma tarefa!");
+    return;
+ } else {
  adicionar(input.value);
  form.reset();
+};
 }
+
 
 function adicionar(description) {
   const taskContainer = document.createElement("div");
@@ -30,3 +41,4 @@ function adicionar(description) {
 
   console.log(taskLabel);
 }
+
